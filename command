@@ -10,6 +10,7 @@ ssh-keygen -t rsa -b 4020 -N "abp" -f "./key/prokey"
  744 = rwxr--r---
  644 = rw-r--r--- folder
  755 = rwxr-xr-x
- 
+
  git config --local --add core.sshcommand "ssh -i D:/prog/terra/env-proj/key/prokey"
  git remote add terra-remote-url git@github.com:azeez-blessing/demo-terra-interact.git
+ git branch -M main
