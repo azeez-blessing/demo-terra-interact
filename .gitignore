@@ -1,0 +1,138 @@
+# .gitignore for Terraform Enterprise Project
+
+# ================================
+# Terraform Files
+# ================================
+# Terraform state files
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Terraform variable files (contains sensitive data)
+terraform.tfvars
+*.auto.tfvars
+
+# Terraform plan files
+*.tfplan
+
+# Terraform lock files (comment out if you want to commit lock files)
+.terraform.lock.hcl
+
+# Terraform directories
+.terraform/
+.terraform.d/
+
+# ================================
+# IDE and Editor Files
+# ================================
+# VSCode
+.vscode/
+*.code-workspace
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ================================
+# OS Generated Files
+# ================================
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ================================
+# Application Specific
+# ================================
+# Logs
+*.log
+logs/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+
+# ================================
+# AWS and Cloud Files
+# ================================
+# AWS CLI config (if accidentally placed in project)
+.aws/
+
+# ================================
+# Security Files
+# ================================
+# Private keys
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# ================================
+# Backup Files
+# ================================
+*.bak
+*.backup
+*.tmp
+
+# ================================
+# Archive Files
+# ================================
+*.zip
+*.tar.gz
+*.rar
+
+# ================================
+# Documentation Build
+# ================================
+# Generated documentation
+docs/_build/
+site/
+
+# ================================
+# Temporary Files
+# ================================
+tmp/
+temp/
+.tmp/
+
+**/.terraform/
+key

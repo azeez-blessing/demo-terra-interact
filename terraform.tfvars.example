@@ -1,0 +1,61 @@
+# Terraform Variables File Template
+# This file contains common variables used across all environments
+# Copy this to terraform.tfvars and customize for your environment
+
+# ================================
+# Basic Configuration
+# ================================
+project_name = "enterprise-app"
+aws_region   = "us-west-2"
+
+# ================================
+# Environment Configuration
+# ================================
+environment = "dev"  # Change to: dev, staging, prod
+
+# ================================
+# Security Configuration
+# ================================
+key_name = "your-ec2-key-pair"  # Replace with your EC2 key pair name
+
+# CIDR blocks allowed to access your resources
+# For production, restrict this to your corporate IP ranges
+allowed_cidr_blocks = [
+  "10.0.0.0/16",    # Private network
+  "YOUR.IP.ADDR/32" # Replace with your public IP
+]
+
+# ================================
+# Monitoring Configuration
+# ================================
+notification_email = "your-email@company.com"  # Replace with your email
+
+# Optional: Slack webhook for notifications (production environments)
+# slack_webhook_url = "https://hooks.slack.com/services/YOUR/SLACK/WEBHOOK"
+
+# ================================
+# Auto Scaling Configuration (Production only)
+# ================================
+# min_size         = 2
+# max_size         = 10
+# desired_capacity = 3
+
+# ================================
+# Backup Configuration
+# ================================
+# backup_retention_days = 30  # Production: 30, Staging: 14, Dev: 7
+
+# ================================
+# Network Configuration
+# ================================
+# Override default CIDR blocks if needed
+# vpc_cidr = "10.0.0.0/16"
+# public_subnet_cidrs = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+# private_subnet_cidrs = ["10.0.10.0/24", "10.0.11.0/24", "10.0.12.0/24"]
+
+# ================================
+# Instance Configuration
+# ================================
+# instance_type = "t3.micro"      # Dev
+# instance_type = "t3.medium"     # Staging
+# instance_type = "m5.large"      # Production
