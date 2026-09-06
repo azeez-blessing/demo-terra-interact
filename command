@@ -1,4 +1,4 @@
-ssh-keygen -t rsa -b 4020 -N "abp" -f "./key/prokey"
+ssh-keygen -t rsa -b 4020 -N "tatalosin" -f "./key/prokey"
  -N = new passphrase
  4 = r
  2 = w
